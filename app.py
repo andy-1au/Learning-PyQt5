@@ -12,7 +12,7 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("My App")
 
         button = QPushButton("Press Me!")
-        button.setCheckable(True) 
+        button.setCheckable(True) # default is false, starts on false
         button.clicked.connect(self.buttonClicked)
         button.clicked.connect(self.buttonToggled) # sends a boolean value representing the check state to the buttonToggled()
 
@@ -28,7 +28,7 @@ class MainWindow(QMainWindow):
         print("Clicked!")
 
     def buttonToggled(self, checked):
-        print("Checked?", checked)
+        print("On" if checked else "Off")
 
 # Only need one QApplication instance per application
 # Pass in sys.argv to allow CLI for the app
