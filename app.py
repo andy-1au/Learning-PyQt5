@@ -13,6 +13,8 @@ class MainWindow(QMainWindow):
 
         self.setCentralWidget(button) # Set the central widget of the window
 
+        self.setFixedSize(QSize(400, 300)) # Set window size (width, height
+
 
 # Only need one QApplication instance per application
 # Pass in sys.argv to allow CLI for the app
