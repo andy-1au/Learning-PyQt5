@@ -13,6 +13,7 @@ class MainWindow(QMainWindow):
 
         self.setCentralWidget(button) # Set the central widget of the window
 
+
 # Only need one QApplication instance per application
 # Pass in sys.argv to allow CLI for the app
 app = QApplication(sys.argv)
