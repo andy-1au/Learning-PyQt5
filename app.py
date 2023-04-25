@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QApplication, QWidget, QPushButton
+from PyQt5.QtWidgets import *
 
 import sys #for CLI args
 
@@ -7,7 +7,7 @@ import sys #for CLI args
 app = QApplication(sys.argv)
 
 # Create a Qt widget -- the window 
-window = QPushButton("Push Me")
+window = QMainWindow()
 window.show() # NOTE: windows are hidden by default
 
 # Start the event loop
