@@ -14,6 +14,7 @@ class MainWindow(QMainWindow):
         button = QPushButton("Press Me!")
         button.setCheckable(True) 
         button.clicked.connect(self.buttonClicked)
+        button.clicked.connect(self.buttonToggled) # sends a boolean value representing the check state to the buttonToggled()
 
 
         self.setCentralWidget(button) # Set the central widget of the window
@@ -21,11 +22,13 @@ class MainWindow(QMainWindow):
         # self.setFixedSize(QSize(400, 300)) # Set window size (width, height
 
         self.setMinimumSize(QSize(400, 400)) # Set minimum window size
-
         self.setMaximumSize(QSize(800, 800)) # Set maximum window size
 
     def buttonClicked(self):
         print("Clicked!")
+
+    def buttonToggled(self, checked):
+        print("Checked?", checked)
 
 # Only need one QApplication instance per application
 # Pass in sys.argv to allow CLI for the app
